@@ -1,3 +1,8 @@
+// MDN - Destructuring assignment
+/*
+    The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+*/
+
 // Testing Deconstruction
 test('can deconstruct arrays', () => {
     let [x, y] = [3,2];
@@ -31,7 +36,7 @@ test('can deconstruct objects', () => {
     expect(lastName).toBe("Morey");
 });
 
-test('can deconstruct objects with functions', () => {
+test('can deconstruct objects with functions to new variable names', () => {
 
     let getObject = function() {
         return {

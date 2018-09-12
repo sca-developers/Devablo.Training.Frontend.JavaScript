@@ -38,3 +38,16 @@ test('test Let Scoping using Flag False and undefined', () => {
     // Need to have wrapper for testing ThrowError
     expect(() => {testLetfunc(false)}).toThrowError(ReferenceError);
 });
+
+
+test('test IIFE scoping', () => {
+
+    func = () => {
+        (function () {  // open IIFE
+            var tmp = "Hello World";
+        }());  // close IIFE
+    }
+
+    // Need to have wrapper for testing ThrowError
+    expect(() => {tmp}).toThrowError(ReferenceError);
+});

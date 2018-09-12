@@ -58,6 +58,24 @@ test('can get rest params arguments from function', () => {
 
 
 // Arrow Functions
+
+test('can execute arrow functions using parentheses', () => {
+    const arr = [1, 2, 3];
+    const squares = arr.map((x) => x * x);
+    
+    console.log(squares);
+    expect(squares).not.toBeNull();
+});
+
+
+test('can execute arrow functions with single param without parentheses', () => {
+    const arr = [1, 2, 3];
+    const squares = arr.map(x => x * x);
+    
+    console.log(squares);
+    expect(squares).toEqual([1,4,9]);
+});
+
 test('can execute arrow function basic', () => {
     let sum = (x,y) => x + y;
 

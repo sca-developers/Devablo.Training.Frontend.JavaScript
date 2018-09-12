@@ -15,9 +15,8 @@ test('test conditional operator using Flag False and expect 0', () => {
     expect(testFunc(false)).toBe(0);
 });
 
-test('', () => {
-  
+test('test Object Is', () => {
     let result = Object.is(1,2);
     
     expect(result).toBe(false);
-  });
+});
